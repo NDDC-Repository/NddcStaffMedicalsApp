@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NddcStaffMedicals.Web", "NddcStaffMedicals.Web\NddcStaffMedicals.Web.csproj", "{6B8D1465-FF3B-46FD-8FD9-71888DEFFFA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NddcStaffMedicals.Web", "NddcStaffMedicals.Web\NddcStaffMedicals.Web.csproj", "{6B8D1465-FF3B-46FD-8FD9-71888DEFFFA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NddcStaffMedicalsLibrary", "NddcStaffMedicalsLibrary\NddcStaffMedicalsLibrary.csproj", "{CDB9E63F-8E71-4CAF-BB07-E6A8B99F8FE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NddcStaffMedicalsLibrary", "NddcStaffMedicalsLibrary\NddcStaffMedicalsLibrary.csproj", "{CDB9E63F-8E71-4CAF-BB07-E6A8B99F8FE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

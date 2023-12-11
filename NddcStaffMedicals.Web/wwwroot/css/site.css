@@ -16,3 +16,38 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.hero-image {
+    margin-top: 5rem;
+    background-image: url(/images/demos/lab5.png);
+    height: 50rem;
+    background-size: cover
+}
+@media screen and (max-width: 1100px) {
+    .hero-image {
+        background-image: url(/images/demos/lab5-2.png);
+        height: 50rem;
+        background-size: cover;
+    }
+}
+
+.navbar-landing {
+    background-color: var(--vz-card-bg-custom);
+}
+
+@media (max-width: 1024px){
+    .navbar-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+    }
+} 
+@media (min-width: 768px) {
+    .page-content {
+        margin-top: 70px
+    }
+} 

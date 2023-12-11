@@ -2,9 +2,595 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    Layout = "_HomeLayout";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+
+<section class="section pb-0 hero-section w-100 hero-image img-fluid" id="hero" style="">
+    <div class="container-fluid">
+        <div class="row justify-content-start">
+                @*<img src="images/demos/lab5.png" class="d-block w-100 img-fluid mx-auto" alt="..." >*@
+                <div class="text-start mt-5 pt-5 w-auto z-1 position-absolute text-dark-emphasis ps-5 lh-lg " style="top: 10%">
+                    <div class="col-xl-12 col-sm-10">
+                    <h2 class="mb-3 fw-bold btn btn-soft-success waves-effect waves-light">MRMS STAFF </h2>
+                    <h1 class="display-4 fw-semibold mb-4 pb-2 text-dark-emphasis">NDDC Medical Records <br> Staff Portal </h1>
+                    <h4 class="text-dark">NDDC Staff Portal For Medical Records <br /> Management And Payment.</h4>
+
+                    <div class="d-flex gap-2 mt-4">
+                        @*<a href="Registration" class="btn btn-success">Register Now <i class="ri-arrow-right-line align-middle ms-1"></i></a>*@
+                        <a class="btn btn-success" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignIn">Register Now</a>
+                        <a href="pages-pricing.html" class="btn btn-primary">View Plans <i class="ri-eye-line align-middle ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <h2 class="mb-3 fw-bold lh-base">Embark on Your Medical Exploration</h2>
+                    <p class="text-muted"> A creative person has the ability to invent and develop original ideas, especially in the arts. Like so many creative people, he was never satisfied.</p>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+                
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card shadow-none">
+                    <div class="card-body">
+                        <img src="/images/nft/wallet.png" alt="" class="avatar-sm">
+                        <h5 class="mt-4">Register your account</h5>
+                        <p class="text-muted fs-14">Delve into the process by setting up your account and completing the registration.</p>
+                        <a href="#!" class="link-primary fs-14">Read More <i class="ri-arrow-right-line align-bottom"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+            <div class="col-lg-3">
+                <div class="card shadow-none">
+                    <div class="card-body">
+                        <img src="/images/nft/money.png" alt="" class="avatar-sm">
+                        <h5 class="mt-4">Pick Your Plan</h5>
+                        <p class="text-muted fs-14">Create a collection and give it a proper art.</p>
+                        <a href="#!" class="link-primary fs-14">Read More <i class="ri-arrow-right-line align-bottom"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+            <div class="col-lg-3">
+                <div class="card shadow-none">
+                    <div class="card-body">
+                        <img src="/images/nft/add.png" alt="" class="avatar-sm">
+                        <h5 class="mt-4">Select Your Preferred Date</h5>
+                        <p class="text-muted fs-14">Go to your profile icon and top right corner creation page.</p>
+                        <a href="#!" class="link-primary fs-14">Read More <i class="ri-arrow-right-line align-bottom"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+            <div class="col-lg-3">
+                <div class="card shadow-none">
+                    <div class="card-body">
+                        <img src="/images/nft/sell.png" alt="" class="avatar-sm">
+                        <h5 class="mt-4">View A History Of Your Medical Records</h5>
+                        <p class="text-muted fs-14">Create a collection and give Add items and art.</p>
+                        <a href="#!" class="link-primary fs-14">Read More <i class="ri-arrow-right-line align-bottom"></i></a>
+                    </div>
+                </div>
+            </div><!--end col-->
+        </div><!--end row-->
+    </div><!-- end container -->
+</section>
+<section class="section"  style="background: cadetblue;">
+    <div class="container">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6 order-2 order-lg-1">
+                <div class="text-muted text-light">
+                    <h5 class="fs-12 text-uppercase text-white">Functionality</h5>
+                    <h2 class="mb-3 fw-bold text-light">Preserve Essential Health Related Information</h2>
+                    <p class="mb-4 ff-secondary text-light">
+                        Through our staff portal, we ensure the preservation of your crucial health-related data. 
+                        This information not only contributes to your current well-being but also acts as a proactive measure,
+                        preparing and safeguarding for the future.
+                        These Vital Information Include:
+                        </p>
+
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="vstack gap-2">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-2">
+                                        <div class="avatar-xs icon-effect">
+                                            <div class="avatar-title bg-transparent text-white rounded-circle h2">
+                                                <i class="ri-check-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fs-14 mb-0">Blood Pressure</h5>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-2">
+                                        <div class="avatar-xs icon-effect">
+                                            <div class="avatar-title bg-transparent text-white rounded-circle h2">
+                                                <i class="ri-check-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fs-14 mb-0">Pulse Rate</h5>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-2">
+                                        <div class="avatar-xs icon-effect">
+                                            <div class="avatar-title bg-transparent text-white rounded-circle h2">
+                                                <i class="ri-check-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fs-14 mb-0">Blood Oxygen</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="vstack gap-2">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-2">
+                                        <div class="avatar-xs icon-effect">
+                                            <div class="avatar-title bg-transparent text-white rounded-circle h2">
+                                                <i class="ri-check-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fs-14 mb-0">Disabilities</h5>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-2">
+                                        <div class="avatar-xs icon-effect">
+                                            <div class="avatar-title bg-transparent text-white rounded-circle h2">
+                                                <i class="ri-check-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h5 class="fs-14 mb-0">BMI</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @*<div class="mt-4">
+                        <a href="index-2.html" class="btn btn-primary">Learn More <i class="ri-arrow-right-line align-middle ms-1"></i></a>
+                    </div>*@
+                </div>
+            </div>
+            <!-- end col -->
+            <div class="col-lg-6 col-sm-7 col-10 ms-auto order-1 order-lg-2">
+                <div>
+                    <img src="images/landing/features/img-2.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+@*<section class="section bg-light" id="plans">
+    <div class="bg-overlay bg-overlay-pattern"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <h2 class="mb-3 fw-bold">Choose the plan that's right for you</h2>
+                    <p class="text-muted mb-4">Simple pricing. No hidden fees. Advanced features for you
+                        business.</p>
+
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div>
+                            <h5 class="fs-14 mb-0">Month</h5>
+                        </div>
+                        <div class="form-check form-switch fs-20 ms-3 " onclick="check()">
+                            <input class="form-check-input" type="checkbox" id="plan-switch">
+                            <label class="form-check-label" for="plan-switch"></label>
+                        </div>
+                        <div>
+                            <h5 class="fs-14 mb-0">Annual <span class="badge badge-soft-success">Save 20%</span></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end row -->
+
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <div class="card plan-box mb-0">
+                    <div class="card-body p-4 m-2">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1 fw-semibold">Basic Plan</h5>
+                                <p class="text-muted mb-0">For Startup</p>
+                            </div>
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-light rounded-circle text-primary">
+                                    <i class="ri-book-mark-line fs-20"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4 text-center">
+                            <h1 class="month" style="display: block;"><sup><small>$</small></sup><span class="ff-secondary fw-bold">19</span> <span class="fs-13 text-muted">/Month</span></h1>
+                            <h1 class="annual" style="display: none;"><sup><small>$</small></sup><span class="ff-secondary fw-bold">171</span> <span class="fs-13 text-muted">/Year</span></h1>
+                        </div>
+
+                        <div>
+                            <ul class="list-unstyled text-muted vstack gap-3 ff-secondary">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            Upto <b>3</b> Projects
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            Upto <b>299</b> Customers
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            Scalable Bandwidth
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b>5</b> FTP Login
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-danger me-1">
+                                            <i class="ri-close-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b>24/7</b> Support
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-danger me-1">
+                                            <i class="ri-close-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b>Unlimited</b> Storage
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-danger me-1">
+                                            <i class="ri-close-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            Domain
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="javascript:void(0);" class="btn btn-soft-success w-100">Get
+                                    Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+            <div class="col-lg-4">
+                <div class="card plan-box mb-0 ribbon-box right">
+                    <div class="card-body p-4 m-2">
+                        <div class="ribbon-two ribbon-two-danger"><span>Popular</span></div>
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1 fw-semibold">Pro Business</h5>
+                                <p class="text-muted mb-0">Professional plans</p>
+                            </div>
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-light rounded-circle text-primary">
+                                    <i class="ri-medal-fill fs-20"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4 text-center">
+                            <h1 class="month" style="display: block;"><sup><small>$</small></sup><span class="ff-secondary fw-bold">29</span> <span class="fs-13 text-muted">/Month</span></h1>
+                            <h1 class="annual" style="display: none;"><sup><small>$</small></sup><span class="ff-secondary fw-bold">261</span> <span class="fs-13 text-muted">/Year</span></h1>
+                        </div>
+
+                        <div>
+                            <ul class="list-unstyled text-muted vstack gap-3 ff-secondary">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            Upto <b>15</b> Projects
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b>Unlimited</b> Customers
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Scalable Bandwidth
+                                        </font></font></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b>12</b> FTP Login
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24/7</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Support
+                                        </font></font></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-danger me-1">
+                                            <i class="ri-close-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Unlimited</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Storage
+                                        </font></font></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-danger me-1">
+                                            <i class="ri-close-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Domain
+                                        </font></font></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="javascript:void(0);" class="btn btn-soft-success w-100"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Get
+                                    Started</font></font></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+            <div class="col-lg-4">
+                <div class="card plan-box mb-0">
+                    <div class="card-body p-4 m-2">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1 fw-semibold">Platinum Plan</h5>
+                                <p class="text-muted mb-0">Enterprise Businesses</p>
+                            </div>
+                            <div class="avatar-sm">
+                                <div class="avatar-title bg-light rounded-circle text-primary">
+                                    <i class="ri-stack-fill fs-20"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4 text-center">
+                            <h1 class="month" style="display: block;"><sup><small>$</small></sup><span class="ff-secondary fw-bold">39</span> <span class="fs-13 text-muted">/Month</span></h1>
+                            <h1 class="annual" style="display: none;"><sup><small>$</small></sup><span class="ff-secondary fw-bold">351</span> <span class="fs-13 text-muted">/Year</span></h1>
+                        </div>
+
+                        <div>
+                            <ul class="list-unstyled text-muted vstack gap-3 ff-secondary">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b>Unlimited</b> Projects
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Unlimited</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Customers
+                                        </font></font></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Scalable Bandwidth
+                                        </font></font></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b>Unlimited</b> FTP Login
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24/7</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Support
+                                        </font></font></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Unlimited</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Storage
+                                        </font></font></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0 text-success me-1">
+                                            <i class="ri-checkbox-circle-fill fs-15 align-middle"></i>
+                                        </div>
+                                        <div class="flex-grow-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                            Domain
+                                        </font></font></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="javascript:void(0);" class="btn btn-soft-success w-100"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Get
+                                    Started</font></font></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end col-->
+        </div>
+        <!--end row-->
+    </div>
+    <!-- end container -->
+</section>*@
+<section class="section bg-light" id="plans">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="flex-shrink-0 me-1 d-flex">
+                    <i class="ri-question-line fs-24 align-middle text-success me-1"></i>
+                    <h2 class="mb-3 fw-bold">Frequently Asked Questions</h2>
+                </div>
+                
+                <div class="mt-3">
+                    <div class="d-flex align-items-center mb-2">
+                        
+                    </div>
+
+                    <div class="accordion accordion-border-box" id="genques-accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="genques-headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#genques-collapseOne" aria-expanded="true" aria-controls="genques-collapseOne">
+                                    What is Lorem Ipsum ?
+                                </button>
+                            </h2>
+                            <div id="genques-collapseOne" class="accordion-collapse collapse show" aria-labelledby="genques-headingOne" data-bs-parent="#genques-accordion">
+                                <div class="accordion-body">
+                                    If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple their most common words.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="genques-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genques-collapseTwo" aria-expanded="false" aria-controls="genques-collapseTwo">
+                                    Why do we use it ?
+                                </button>
+                            </h2>
+                            <div id="genques-collapseTwo" class="accordion-collapse collapse" aria-labelledby="genques-headingTwo" data-bs-parent="#genques-accordion">
+                                <div class="accordion-body">
+                                    The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="genques-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genques-collapseThree" aria-expanded="false" aria-controls="genques-collapseThree">
+                                    Where does it come from ?
+                                </button>
+                            </h2>
+                            <div id="genques-collapseThree" class="accordion-collapse collapse" aria-labelledby="genques-headingThree" data-bs-parent="#genques-accordion">
+                                <div class="accordion-body">
+                                    he wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="genques-headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genques-collapseFour" aria-expanded="false" aria-controls="genques-collapseFour">
+                                    Where can I get some ?
+                                </button>
+                            </h2>
+                            <div id="genques-collapseFour" class="accordion-collapse collapse" aria-labelledby="genques-headingFour" data-bs-parent="#genques-accordion">
+                                <div class="accordion-body">
+                                    Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis aliquam ultrices mauris.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end accordion-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      
+
