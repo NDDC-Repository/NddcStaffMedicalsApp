@@ -22,40 +22,32 @@
 
 <ul class="nav nav-pills nav-justified arrow-navtabs nav-success bg-light mb-3" role="tablist">
     <li class="nav-item" role="presentation">
-        <a class="nav-link active" data-bs-toggle="tab" href="#arrow-overview" role="tab" aria-selected="true">
+        <a class="nav-link active" data-bs-toggle="tab"  role="tab" aria-selected="true">
             <span class="d-block d-sm-none"><i class="mdi mdi-home-variant"></i></span>
-            <span class="d-none d-sm-block">Payment Information</span>
+            <span class="d-none d-sm-block"> Step 1: Payment Information</span>
         </a>
     </li>
     <li class="nav-item" role="presentation">
-        <a class="nav-link" data-bs-toggle="tab" href="#arrow-profile" role="tab" aria-selected="false" tabindex="-1">
+        <a class="nav-link">
             <span class="d-block d-sm-none"><i class="mdi mdi-account"></i></span>
-            <span class="d-none d-sm-block">Make Payment</span>
+            <span class="d-none d-sm-block"> Step 2: Make Payment</span>
         </a>
     </li>
     <li class="nav-item" role="presentation">
-        <a class="nav-link" data-bs-toggle="tab" href="#arrow-contact" role="tab" aria-selected="false" tabindex="-1">
+        <a class="nav-link">
             <span class="d-block d-sm-none"><i class="mdi mdi-email"></i></span>
-            <span class="d-none d-sm-block">Confirmation</span>
+            <span class="d-none d-sm-block">Step 3: Verify</span>
         </a>
     </li>
 </ul>
 
 <div class="tab-content text-muted">
     <div class="tab-pane active show" id="arrow-overview" role="tabpanel">
-        <div class="position-relative m-4 mt-5">
-            <div class="progress" style="height: 1px;">
-                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-success rounded-pill" style="width: 2rem; height:2rem;">1</button>
-            <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-light rounded-pill" style="width: 2rem; height:2rem;">2</button>
-            <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-light rounded-pill" style="width: 2rem; height:2rem;">3</button>
-        </div>
         <div class="row p-3">
             <div class="d-flex justify-content-center">
                 <div class="card col-10 col-xl-8">
                     <div class="card-header align-items-center d-flex">
-                        <h4 class="card-title mb-0 flex-grow-1">Payment Information</h4>
+                        <h4 class="card-title mb-0 flex-grow-1"> Payment Information</h4>
                         <div>
                         </div>
                     </div><!-- end card-header -->
@@ -86,7 +78,7 @@
                                     <input type="number" class="form-control" id="labelInput" placeholder="">
                                 </div>
                             </div>
-                            <a data-bs-toggle="tab" href="#arrow-profile" role="tab" ><span type="button" class="btn btn-success waves-effect waves-light">Proceed</span></a>
+                            <a data-bs-toggle="tab" href="/Staff/Payments/Verify" role="tab" ><span type="button" class="btn btn-success waves-effect waves-light">Proceed</span></a>
                            
                         </div>
                     </div>
@@ -94,7 +86,7 @@
              </div>
         </div>
     </div>
-    <div class="tab-pane" id="arrow-profile" role="tabpanel">
+@*    <div class="tab-pane" id="arrow-profile" role="tabpanel">
         <div class="position-relative m-4  mt-5">
             <div class="progress" style="height: 1px;">
                 <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -248,12 +240,12 @@
                     and your selected Test Center has been notified <br /> and is ready to carry out your exaamination.
                 </p>
 
-                @*<h3 class="fw-semibold">Order ID: <a href="apps-ecommerce-order-details.html" class="text-decoration-underline">VZ2451</a></h3>*@
+                @*<h3 class="fw-semibold">Order ID: <a href="apps-ecommerce-order-details.html" class="text-decoration-underline">VZ2451</a></h3>
                 <a href="/Staff/Payments/AllPayments"><span type="button" class="btn btn-success waves-effect waves-light mt-3">Finish</span></a>
             </div>
             </div>
            </div>
-</div>
+</div>*@
 </div>
 @*<div class="row p-3 justify-content-center">
     <div class="">
