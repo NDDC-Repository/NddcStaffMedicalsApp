@@ -1,26 +1,25 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using NddcStaffMedicalsLibrary.Data.PaymentService;
 using NddcStaffMedicalsLibrary.Model.OnlinePayment;
 
 namespace NddcStaffMedicals.Web.Pages
 {
-    public class IndexModel : PageModel
+    public class paymentModel : PageModel
     {
         private readonly IOnlinePaymentsData paystackDb;
+
         [BindProperty]
         public MyPaymentModel Payment { get; set; }
         public MyResponseModel Response { get; set; }
         public string Error { get; set; }
 
-        public IndexModel(IOnlinePaymentsData paystackDb)
+        public paymentModel(IOnlinePaymentsData paystackDb)
         {
             this.paystackDb = paystackDb;
         }
-
         public void OnGet()
         {
-
         }
 
         public IActionResult OnPost()

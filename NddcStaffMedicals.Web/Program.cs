@@ -1,7 +1,17 @@
+using NddcStaffMedicalsLibrary.Data.EmployeeData;
+using NddcStaffMedicalsLibrary.Data.PaymentService;
+using NddcStaffMedicalsLibrary.Data.PaymentTrx;
+using NddcStaffMedicalsLibrary.Databases;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddTransient<ISqlDataAccess, SqlDataAccess>();
+builder.Services.AddTransient<IEmployeeData, SQLEmployee>();
+builder.Services.AddTransient<IPaymentTrxData, SqlPaymentTrx>();
+builder.Services.AddTransient<IOnlinePaymentsData, SqlPayStack>();
+
 
 var app = builder.Build();
 

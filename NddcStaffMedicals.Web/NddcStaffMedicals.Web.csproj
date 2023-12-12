@@ -22,4 +22,8 @@
     <None Include="Pages\Staff\Index.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NddcStaffMedicalsLibrary\NddcStaffMedicalsLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

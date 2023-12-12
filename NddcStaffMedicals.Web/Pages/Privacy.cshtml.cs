@@ -1,19 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using NddcStaffMedicalsLibrary.Data.PaymentService;
+using NddcStaffMedicalsLibrary.Model.OnlinePayment;
 
 namespace NddcStaffMedicals.Web.Pages
 {
     public class PrivacyModel : PageModel
     {
-        private readonly ILogger<PrivacyModel> _logger;
+        private readonly IOnlinePaymentsData paystackDb;
+        public MyResponseModel Response { get; set; }
+        public MyResponseModel Verify { get; set; }
 
-        public PrivacyModel(ILogger<PrivacyModel> logger)
+        public PrivacyModel(IOnlinePaymentsData paystackDb)
         {
-            _logger = logger;
+            this.paystackDb = paystackDb;
         }
 
-        public void OnGet()
+        public void OnGet(string reference)
         {
+            Verify = paystackDb.Verify(reference);
         }
     }
 }

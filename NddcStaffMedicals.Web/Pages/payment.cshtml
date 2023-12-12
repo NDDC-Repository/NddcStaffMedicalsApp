@@ -1,0 +1,35 @@
+﻿@page
+@model NddcStaffMedicals.Web.Pages.paymentModel
+@{
+}
+
+
+<div class="d-flex justify-content-center align-items-center" style="height: 80vh;">
+    <div class="card" style="width: 24rem;">
+        <div class="card-body">
+            <h3 class="card-title text-center">Payment</h3>
+            @if (!string.IsNullOrEmpty(Model.Error))
+            {
+                <div class="alert alert-danger">@Model.Error</div>
+            }
+            <form method="post">
+                <div class="form-group mt-3">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" asp-for=@Model.Payment.Name name="name" id="name" required />
+                </div>
+                <div class="form-group mt-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" asp-for=@Model.Payment.Email name="email" id="email" required />
+                </div>
+                <div class="form-group mt-3">
+                    <label for="amount">Amount</label>
+                    <input type="number" class="form-control" asp-for=@Model.Payment.Amount name="amount" id="amount" required />
+                </div>
+                <div class="d-grid gap-2 mt-3">
+                    <button type="submit" class="btn btn-primary">Pay Now</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
