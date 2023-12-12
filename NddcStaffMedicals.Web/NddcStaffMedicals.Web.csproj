@@ -7,7 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NddcStaffMedicalsLibrary\NddcStaffMedicalsLibrary.csproj" />
+    <Content Remove="Pages\Staff\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Staff\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Staff\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Staff\Index.cshtml" />
   </ItemGroup>
 
 </Project>
