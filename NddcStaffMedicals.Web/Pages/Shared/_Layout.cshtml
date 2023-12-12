@@ -158,19 +158,19 @@
                         <ul class="navbar-nav" id="navbar-nav">
                             <!-- Main Menu -->
                             <li class="nav-item">
-                                <a class="nav-link menu-link @ViewData["Employees"]" href="/Lab/Patient/Search">
+                                <a class="nav-link menu-link @ViewData["Employees"]" href="/Staff/Dashboard">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home icon-dual"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                                     <span data-key="t-dashboards">HOME</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link menu-link ps-4 @ViewData["Employees"]" href="/Lab/Patient/Search">
+                                <a class="nav-link menu-link ps-4 @ViewData["Employees"]" href="/Staff/Payments/AllPayments">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg> 
                                     <span data-key="t-dashboards">PAYMENTS</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link menu-link @ViewData["Employees"]" href="/Lab/Patient/Search">
+                                <a class="nav-link menu-link @ViewData["Employees"]" href="/Staff/TestResult/MyTest">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
                                     <span data-key="t-dashboards">TEST RESULTS</span>
                                 </a>
@@ -1228,8 +1228,13 @@
 
     <!-- apexcharts -->
     <script src="~/libs/apexcharts/apexcharts.min.js"></script>
-    <script src="assets/libs/echarts/echarts.min.js"></script>
-    <script src="assets/js/pages/echarts.init.js"></script>
+    <script src="libs/echarts/echarts.min.js"></script>
+    <script src="js/pages/echarts.init.js"></script>
+    <script type="text/javascript" src="libs/flatpickr/flatpickr.min.js"></script>
+    <script type="text/javascript" src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="assets/js/pages/chartjs.init.js"></script>
+    <script src="assets/libs/chart.js/chart.min.js"></script>
     <!-- Vector map-->
     <script src="~/libs/jsvectormap/js/jsvectormap.min.js"></script>
     <script src="~/libs/jsvectormap/maps/world-merc.js"></script>
