@@ -35,8 +35,9 @@ namespace NddcStaffMedicalsLibrary.Data.PaymentService
                 Email = payment.Email,
                 Reference = Generate().ToString(),
                 Currency = "NGN",
-                //CallbackUrl = "https://localhost:7194/Staff/Payments/Verify"
-                CallbackUrl = "https://medicals.nddc.gov.ng/Staff/Payments/Verify"
+                /*CallbackUrl = "https://localhost:7194/Staff/Payments/Verify"*/                
+                CallbackUrl = "https://localhost:7194/Portal/Payments/Verify"
+                //CallbackUrl = "https://medicals.nddc.gov.ng/Staff/Payments/Verify"
             };
 
             TransactionInitializeResponse response = Paystack.Transactions.Initialize(request);

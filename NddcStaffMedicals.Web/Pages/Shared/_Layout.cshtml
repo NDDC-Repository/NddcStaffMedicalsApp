@@ -12,10 +12,14 @@
     <base href="~/" />
     <!-- App favicon -->
     <link rel="shortcut icon" href="~/images/favicon.ico">
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link href="css/modern.css" type="text/css" rel="stylesheet">
-    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="css/staff.css" asp-append-version="true" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-L60WZ8225J&amp;l=dataLayer&amp;cx=c"></script>
     <script src="js/settings.js"></script>
@@ -40,30 +44,38 @@
     <!-- Icons Css -->
     <link href="~/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
-    <link href="~/css/app.min.css" rel="stylesheet" type="text/css" />
-    <!-- custom Css-->
-    <link href="~/css/custom.min.css" rel="stylesheet" type="text/css" />
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
+    @* <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
     <script src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
-    <link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/material.css" rel="stylesheet" /> *@
     
     <component type="typeof(HeadOutlet)" , render-mode="ServerPrerendered" />
 </head>
-<body>
+<body style="
+    font-family: 'Open Sans';
+    background-color:#fff;
+">
 
     <div id="layout-wrapper">
         <div class="splash">
             <div class="splash-icon"></div>
         </div>
-        <div class="wrapper">
+        <style>
+            #wrapper:before {
+                background: #153d77;
+                border: 1px #153d77;
+                /* border-radius: 0rem 0rem 3rem 3rem; */
+                box-shadow: 0 0 4rem 0 rgba(0,0,0,.05);
+            }
+            </style>
+        <div id="wrapper" class="wrapper">
             <nav id="sidebar" class="sidebar">
-                <a class="sidebar-brand" href="index.html">
+                <a class="sidebar-brand" href="index.html ">
                     <span class="iconify" data-icon="ion:pulse" style="color: #5c93e3;" data-width="32"></span>
                     NDDC Medicals
                 </a>
                 <div class="sidebar-content">
                     <div class="sidebar-user">
-                        <img src="img/avatars/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Linda Miller">
+                        <img src="img/avatars/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Linda Miller" style="height: 160px; width: 160px;">
                         <div class="fw-bold">Linda Miller</div>
                         <small>Front-end Developer</small>
                     </div>
@@ -71,17 +83,17 @@
                     <ul class="sidebar-nav">
                         <li class="sidebar-item active">
                             <a class="sidebar-link" href="/Staff/Dashboard" >
-                                <i class="align-middle me-2 fas fa-fw fa-home"></i> <span class="align-middle">Dashboards</span>
+                                <i class="align-middle me-2 fas fa-fw fa-home text-primary-dark"></i> <span class="align-middle">Dashboards</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="/Staff/Payments/AllPayments" >
-                                <i class="align-middle me-2 fas fa-fw fa-table"></i> <span class="align-middle">Payments</span>
+                                <i class="align-middle me-2 fas fa-fw fa-table text-primary-dark"></i> <span class="align-middle">Payments</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="/Staff/Test/Results">
-                                <i class="align-middle me-2 fas fa-fw fa-file-text"></i> <span class="align-middle">Test Results</span>
+                                <i class="align-middle me-2 fas fa-fw fa-file-text text-primary-dark"></i> <span class="align-middle">Test Results</span>
                             </a>
                         </li>
                     </ul>
@@ -89,18 +101,22 @@
             </nav>
             <div class="main">
                 <nav class="navbar navbar-expand navbar-theme">
-                    <a class="sidebar-toggle d-flex me-2">
-                        <i class="hamburger align-self-center"></i>
-                    </a>
+                    <div class="d-flex text-center">
+                        <a class="sidebar-toggle d-flex me-2">
+                            <i class="hamburger align-self-center"></i>
+                        </a>
 
-                    <form class="d-none d-sm-inline-block">
-                        <input class="form-control form-control-lite" type="text" placeholder="Search projects...">
-                    </form>
+                        @* <div class="d-none d-sm-inline-block">
+                            <h4 class="font-two">
+                                Welcome Back Linda!
+                            </h4>
+                        </div> *@
+                    </div>
 
                     <div class="navbar-collapse collapse">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item dropdown active">
-                                <a class="nav-link dropdown-toggle position-relative" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
+                                <a class="nav-link dropdown-toggle position-relative text-white" href="#" id="messagesDropdown" data-bs-toggle="dropdown">
                                     <i class="align-middle fas fa-envelope-open"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="messagesDropdown">
@@ -165,7 +181,7 @@
                                 </div>
                             </li>
                             <li class="nav-item dropdown ms-lg-2">
-                                <a class="nav-link dropdown-toggle position-relative" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+                                <a class="nav-link dropdown-toggle position-relative text-white" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
                                     <i class="align-middle fas fa-bell"></i>
                                     <span class="indicator"></span>
                                 </a>
@@ -228,7 +244,7 @@
                                 </div>
                             </li>
                             <li class="nav-item dropdown ms-lg-2">
-                                <a class="nav-link dropdown-toggle position-relative" href="#" id="userDropdown" data-bs-toggle="dropdown">
+                                <a class="nav-link dropdown-toggle position-relative text-white" href="#" id="userDropdown" data-bs-toggle="dropdown">
                                     <i class="align-middle fas fa-cog"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
@@ -265,7 +281,6 @@
         <script src="~/lib/jquery/dist/jquery.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
-        <script src="js/app.js"></script>
 
         @await RenderSectionAsync("Scripts", required: false)
     </div>
@@ -279,20 +294,23 @@
     <script src="~/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="~/js/plugins.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script type="text/javascript" src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
-    <script type="text/javascript" src="libs/flatpickr/flatpickr.min.js"></script>
+    <script type="text/javascript" src="~/libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script type="text/javascript" src="~/libs/flatpickr/flatpickr.min.js"></script>
 
     <script src="libs/prismjs/prism.js"></script>
 
+    <!-- chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <!-- apexcharts -->
     <script src="~/libs/apexcharts/apexcharts.min.js"></script>
-    <script src="libs/echarts/echarts.min.js"></script>
-    <script src="js/pages/echarts.init.js"></script>
-    <script type="text/javascript" src="libs/flatpickr/flatpickr.min.js"></script>
-    <script type="text/javascript" src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="~/libs/echarts/echarts.min.js"></script>
+    <script src="~/js/pages/echarts.init.js"></script>
+    <script type="text/javascript" src="~/libs/flatpickr/flatpickr.min.js"></script>
+    <script type="text/javascript" src="~/libs/choices.js/public/assets/scripts/choices.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="assets/js/pages/chartjs.init.js"></script>
-    <script src="assets/libs/chart.js/chart.min.js"></script>
+    <script src="~/js/pages/chartjs.init.js"></script>
+    <script src="~/libs/chart.js/chart.min.js"></script>
     <!-- Vector map-->
     <script src="~/libs/jsvectormap/js/jsvectormap.min.js"></script>
     <script src="~/libs/jsvectormap/maps/world-merc.js"></script>
@@ -303,8 +321,8 @@
     <!-- Dashboard init -->
     <script src="~/js/pages/dashboard-ecommerce.init.js"></script>
 
-    <script src="libs/gridjs/gridjs.umd.js"></script>
-    <script src="js/pages/gridjs.init.js"></script>
+    <script src="~/libs/gridjs/gridjs.umd.js"></script>
+    <script src="~/js/pages/gridjs.init.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
     <!-- App js -->
@@ -496,6 +514,28 @@
                 bFilter: false,
                 autoWidth: false
             });
+        });
+    </script>
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
         });
     </script>
 

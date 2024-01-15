@@ -1,0 +1,44 @@
+﻿@page
+@model NddcStaffMedicals.Web.Pages.Portal.Payments.VerifyModel
+@{
+    Layout = "_Portal";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Payments /</span> Verify</h4>
+    <div class="card mb-3">
+        <div class="d-flex justify-content-between">
+            <h5 class="card-header">Verify</h5>
+            <div class="align-items-center d-flex pe-4"><span class="text-primary">Step 3</span></div>
+        </div>
+    </div>
+    @if (Model.Verify.Status == "success"){
+
+        <div class="d-block d-lg-flex justify-content-center align-items-center">
+            <div class="card col-lg-9">
+                <div class="card-header bg-dark">Payment Complete!</div>
+                <div class="card-body pt-3" style="text-align-last: center;">
+                    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                    <lord-icon src="https://cdn.lordicon.com/twsqddew.json"
+                               trigger="loop"
+                               delay="1500"
+                               stroke="bold"
+                               state="in-reveal"
+                               colors="primary:#4be1ec,secondary:#4030e8"
+                               style="width:200px;height:200px">
+                    </lord-icon>
+
+                    <p class="text-center">
+                        Your Payment has been successfully recieved and processed,<br>
+                        and your selected Test Center has been notified <br> and is ready to carry out your exaamination.
+                    </p>
+                    <a href="/Portal/Payments/AllPayments" type="button" class="btn btn-primary">Finish</a>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <p>@Model.Verify.ErrorMsg</p>
+    }
+</div>

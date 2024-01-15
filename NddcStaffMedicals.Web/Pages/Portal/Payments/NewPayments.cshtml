@@ -1,0 +1,56 @@
+﻿@page
+@model NddcStaffMedicals.Web.Pages.Portal.Payments.NewPaymentsModel
+@{
+    Layout = "_Portal";
+}
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Payments /</span> New Payments</h4>
+    <div class="card mb-3">
+        <div class="d-flex justify-content-between">
+        <h5 class="card-header">New Payments</h5>
+        <div class="align-items-center d-flex pe-4"><span class="text-primary">Step 1</span></div>
+    </div>
+    </div>
+    <div class="d-block d-lg-flex justify-content-center align-items-center">
+        <div class="card col-lg-9">
+            <div class="card-header bg-dark">Payment</div>
+            <div class="card-body pt-3">
+                @if (!string.IsNullOrEmpty(Model.Error))
+                {
+                    <div class="alert alert-danger">@Model.Error</div>
+                }
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="defaultSelect" class="form-label">Test Center</label>
+                        <select id="defaultSelect" class="form-select">
+                            <option>Choose</option>
+                            <option value="1">Medics Diagnostics</option>
+                            <option value="2">Synlab</option>
+                            <option value="3">Geo Services Medical Center</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="defaultFormControlInput" class="form-label">Name</label>
+                        <input type="text" class="form-control" asp-for=@Model.Payment.Name name="name" value="Dagogo Tolofari" id="name" required="" data-val="true" data-val-required="The Name field is required.">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" asp-for=@Model.Payment.Email name ="email" value="tolofaridagogo@gmail.com" id="email" required="" data-val="true" data-val-required="The Email field is required.">
+                    </div>
+                    <div class="mb-3">
+                        <label for="defaultFormControlInput" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" value="Port Harcourt" required="" aria-describedby="defaultFormControlHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Amount</label>
+                        <input type="number" class="form-control" asp-for=@Model.Payment.Amount name="amount" value="250000" id="amount" required="" data-val="true" data-val-required="The Amount field is required.">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Pay Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>
